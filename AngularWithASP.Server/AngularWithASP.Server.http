@@ -1,0 +1,21 @@
+@AngularWithASP.Server_HostAddress = http://localhost:5175
+
+###
+GET {{AngularWithASP.Server_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###
+GET {{AngularWithASP.Server_HostAddress}}/api/about/
+Accept: application/json
+
+###
+GET {{AngularWithASP.Server_HostAddress}}/api/status/
+Accept: application/json
+
+###
+GET {{AngularWithASP.Server_HostAddress}}/api/contact/
+Accept: application/json
+
+GET {{AngularWithASP.Server_HostAddress}}/api/about/
+Accept:application/json
+

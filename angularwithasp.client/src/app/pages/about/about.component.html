@@ -1,0 +1,69 @@
+<p>About how sum works!</p>
+
+<form class="example-form" #userForm="ngForm">
+    <mat-form-field class="example-full-width">
+        <mat-label>Enter number to add numbers up to</mat-label>
+        <input matInput placeholder="Ex. 5" [(ngModel)]="inputValue" type="text" name="inputValue" #inputRef="ngModel"
+            required />
+        <button *ngIf="inputValue" matSuffix mat-icon-button aria-label="Clear" (click)="clearInput()">
+            <mat-icon>close</mat-icon>
+        </button>
+        <mat-hint *ngIf="inputRef.invalid && inputRef.touched">Please enter a number!</mat-hint>
+        <mat-error *ngIf="inputRef.invalid && inputRef.touched">
+            Number is required.
+        </mat-error>
+    </mat-form-field> <mat-divider />
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateSum()">Calculate Sum</button>
+    <p *ngIf="sum !== null">Sum is: {{ sum }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateSquareSum()">Calculate Square
+        Sum</button>
+    <p *ngIf="squareSum !== null">Sum is: {{ squareSum }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateEvenSum()">Calculate Even
+        Numbers Sum</button>
+    <p *ngIf="evenSum !== null">Sum is: {{ evenSum }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateOddSum()">Calculate Odd Numbers
+        Sum</button>
+    <p *ngIf="oddSum !== null">Sum is: {{ oddSum }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateThreesSum()">Calculate Threes
+        Sum</button>
+    <p *ngIf="threesSum !== null">Sum is: {{ threesSum }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateMult3or5()">Calculate Multiple
+        of 3 or 5 </button>
+    <p>Multiple of 3 or 5 is: {{ mult3or5 }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateSumOfNotMult3or5()">Calculate
+        Sum of Not Multiple
+        of 3 or 5 </button>
+    <p *ngIf="sumNotMult3or5 !== null">Sum of Not Multiple of 3 or 5 is: {{ sumNotMult3or5 }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateSumEndsWith3or5()">Calculate
+        Sum of Ends with 3 or 5 </button>
+    <p *ngIf="sumOfEndsWith3or5 !== null">Sum of Ends with 3 or 5 is: {{ sumOfEndsWith3or5 }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateIsBouncy()">Buncy? enter 3
+        digit number </button>
+    <p>Bouncy?: {{ isBouncy }}</p>
+    <br>
+
+    <hr>
+    <h2>Enter input as comma delimited string like 2,4</h2>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateMNSum()">Calculate sum 'm' to
+        'n'</button>
+    <p *ngIf="mNSum !== null">Sum is: {{ mNSum }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateMNProduct()">Calculate Product
+        of 'm' to 'n'</button>
+    <p *ngIf="mNProduct !== null ">Product is: {{ mNProduct }}</p>
+    <br>
+    <button matButton color="primary" type="button" class="float-left" (click)="calculateSumOfBouncy()">sum of Buncy
+        numbers between 2 numbers? </button>
+    <p *ngIf="sumOfBouncy.Sum > 0 ">sum of Bouncy?: {{sumOfBouncy.Sum}}<br>
+        List of Bouncy vals:<span *ngFor="let item of sumOfBouncy.Bouncy"> {{ item }}</span>
+    </p>
+    <br>
+</form>
