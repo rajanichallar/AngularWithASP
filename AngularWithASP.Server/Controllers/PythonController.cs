@@ -3,7 +3,7 @@
 namespace AngularWithASP.Server.Controllers
 {
     [ApiController]
-    [Route("api/[controller]")]
+    [Route("api/test/[controller]")]
     public class PythonController : Controller
     {
         [HttpGet("GetInfo")]

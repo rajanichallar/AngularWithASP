@@ -1,6 +1,6 @@
 import requests
 
-url = "https://localhost:55350/api/python/GetInfo"
+url = "https://localhost:55350/api/test/python/GetInfo"
 response = requests.get(url, verify=False)
 
 if response.status_code == 200:
