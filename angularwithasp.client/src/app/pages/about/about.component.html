@@ -1,6 +1,7 @@
 <p>About how sum works!</p>
 
 <form class="example-form" #userForm="ngForm">
+    <p *ngIf="aboutInfo">{{aboutInfo.company}}</p>
     <mat-form-field class="example-full-width">
         <mat-label>Enter number to add numbers up to</mat-label>
         <input matInput placeholder="Ex. 5" [(ngModel)]="inputValue" type="text" name="inputValue" #inputRef="ngModel"

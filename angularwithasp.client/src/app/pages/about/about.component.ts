@@ -28,12 +28,12 @@ export class AboutComponent implements OnInit {
   constructor(private http: HttpClient, private zone: NgZone, private cdr: ChangeDetectorRef) { }
 
   ngOnInit(): void {
-    // this.http.get<any>('api/test/about/GetInfo', {
-    //   headers: { 'Accept': 'application/json' }
-    // }).subscribe(data => {
-    //   this.aboutInfo = data;
-    //   console.log('aboutInfo', data)
-    // });
+    this.http.get<any>('api/test/about/GetInfo', {
+      headers: { 'Accept': 'application/json' }
+    }).subscribe(data => {
+      this.aboutInfo = data;
+      console.log('aboutInfo', data)
+    });
 
     // this.http.get('api/test/about/GetStatus', {
     //   headers: { 'Accept': 'application/json' }
